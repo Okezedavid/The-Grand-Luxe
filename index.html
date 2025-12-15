@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Grand Luxe Hotel - Premium Accommodations</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>The Grand Luxe</h1>
+          <p class="tagline">Premium Luxury Stays</p>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#rooms" class="nav-link">Rooms</a></li>
+          <li><a href="#reservations" class="nav-link">My Reservations</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to The Grand Luxe</h1>
+        <p class="hero-subtitle">Experience Unparalleled Luxury and Comfort</p>
+
+        <!-- Availability Form -->
+        <div class="availability-form">
+          <h3>Check Availability</h3>
+          <form id="availabilityForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkIn">Check-In</label>
+                <input type="date" id="checkIn" required />
+              </div>
+              <div class="form-group">
+                <label for="checkOut">Check-Out</label>
+                <input type="date" id="checkOut" required />
+              </div>
+              <div class="form-group">
+                <label for="guests">Guests</label>
+                <select id="guests" required>
+                  <option value="">Select</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5+ Guests</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                  Check Availability
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Rooms Section -->
+    <section class="featured-rooms">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Rooms</h2>
+          <p>Discover our most popular accommodations</p>
+        </div>
+        <div class="room-grid" id="featuredRooms">
+          <!-- Room cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="amenities">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose The Grand Luxe</h2>
+          <p>Experience world-class amenities and service</p>
+        </div>
+        <div class="amenities-grid">
+          <div class="amenity-card">
+            <div class="amenity-icon">🏊</div>
+            <h3>Infinity Pool</h3>
+            <p>
+              Relax in our stunning rooftop infinity pool with panoramic city
+              views
+            </p>
+          </div>
+          <div class="amenity-card">
+            <div class="amenity-icon">🍽️</div>
+            <h3>Fine Dining</h3>
+            <p>Savor exquisite cuisine at our Michelin-starred restaurant</p>
+          </div>
+          <div class="amenity-card">
+            <div class="amenity-icon">💆</div>
+            <h3>Luxury Spa</h3>
+            <p>Indulge in rejuvenating treatments at our world-class spa</p>
+          </div>
+          <div class="amenity-card">
+            <div class="amenity-icon">🏋️</div>
+            <h3>Fitness Center</h3>
+            <p>Stay fit in our state-of-the-art 24/7 fitness facility</p>
+          </div>
+          <div class="amenity-card">
+            <div class="amenity-icon">🚗</div>
+            <h3>Valet Parking</h3>
+            <p>Complimentary valet parking service for all guests</p>
+          </div>
+          <div class="amenity-card">
+            <div class="amenity-icon">🌐</div>
+            <h3>Free Wi-Fi</h3>
+            <p>High-speed internet access throughout the property</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- All Rooms Section -->
+    <section id="rooms" class="rooms-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Rooms & Suites</h2>
+          <p>Choose from our collection of elegantly appointed rooms</p>
+        </div>
+        <div class="room-grid" id="allRooms">
+          <!-- All room cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- My Reservations Section -->
+    <section id="reservations" class="reservations-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Reservations</h2>
+          <p>View and manage your bookings</p>
+        </div>
+        <div id="reservationsList" class="reservations-list">
+          <!-- Reservations will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get in Touch</h2>
+          <p>We'd love to hear from you</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="info-item">
+              <h3>📍 Address</h3>
+              <p>123 Luxury Boulevard<br />Metropolitan City, MC 12345</p>
+            </div>
+            <div class="info-item">
+              <h3>📞 Phone</h3>
+              <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="info-item">
+              <h3>✉️ Email</h3>
+              <p>reservations@grandluxe.com</p>
+            </div>
+            <div class="info-item">
+              <h3>🌐 Follow Us</h3>
+              <div class="social-icons">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Twitter</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-container">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="contactName"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="contactEmail"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="contactSubject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="contactMessage"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>The Grand Luxe Hotel</h3>
+            <p>
+              Where luxury meets comfort. Experience the finest hospitality and
+              create unforgettable memories.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#rooms">Rooms</a></li>
+              <li><a href="#reservations">Reservations</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>📞 +1 (555) 123-4567</p>
+            <p>✉️ info@grandluxe.com</p>
+            <p>📍 123 Luxury Boulevard</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 The Grand Luxe Hotel. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Complete Your Reservation</h2>
+        <div id="selectedRoomInfo" class="selected-room-info"></div>
+        <form id="bookingForm">
+          <div class="form-group">
+            <label for="bookingName">Full Name *</label>
+            <input type="text" id="bookingName" required />
+          </div>
+          <div class="form-group">
+            <label for="bookingEmail">Email Address *</label>
+            <input type="email" id="bookingEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="bookingPhone">Phone Number *</label>
+            <input type="tel" id="bookingPhone" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingCheckIn">Check-In Date *</label>
+              <input type="date" id="bookingCheckIn" required />
+            </div>
+            <div class="form-group">
+              <label for="bookingCheckOut">Check-Out Date *</label>
+              <input type="date" id="bookingCheckOut" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bookingGuests">Number of Guests *</label>
+            <select id="bookingGuests" required>
+              <option value="">Select number of guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="specialRequests">Special Requests (Optional)</label>
+            <textarea
+              id="specialRequests"
+              rows="3"
+              placeholder="Any special requirements or preferences..."
+            ></textarea>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-secondary" id="cancelBooking">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Confirm Booking
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+      <div class="success-content">
+        <span class="close-success">&times;</span>
+        <div class="success-icon">✓</div>
+        <h3>Success!</h3>
+        <p id="successText"></p>
+        <div
+          id="successActions"
+          class="modal-actions"
+          style="margin-top: 1rem; display: none"
+        >
+          <button type="button" class="btn btn-secondary" id="closeSuccessBtn">
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="viewReservationsBtn"
+          >
+            View My Reservations
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
