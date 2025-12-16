@@ -8,7 +8,7 @@ const roomsData = [
   {
     id: 1,
     name: "Deluxe King Suite",
-    price: 299,
+    price: 478400,
     description:
       "Spacious suite with king-sized bed, city views, and luxury amenities. Perfect for couples seeking ultimate comfort.",
     image: "assets/imgs/francesca-saraco-_dS27XGgRyQ-unsplash.jpg",
@@ -18,7 +18,7 @@ const roomsData = [
   {
     id: 2,
     name: "Executive Ocean View",
-    price: 399,
+    price: 638400,
     description:
       "Premium ocean-facing room with private balcony, perfect for romantic getaways and special occasions.",
     image: "assets/imgs/juliana-morales-ramirez-GmW4hfTX0ns-unsplash.jpg",
@@ -28,7 +28,7 @@ const roomsData = [
   {
     id: 3,
     name: "Presidential Suite",
-    price: 799,
+    price: 1278400,
     description:
       "The ultimate luxury experience with separate living area, dining room, and panoramic city views.",
     image: "assets/imgs/linus-mimietz-p3UWyaujtQo-unsplash.jpg",
@@ -38,7 +38,7 @@ const roomsData = [
   {
     id: 4,
     name: "Garden Villa",
-    price: 349,
+    price: 558400,
     description:
       "Private villa surrounded by lush gardens, featuring an outdoor seating area and modern amenities.",
     image: "assets/imgs/runnyrem-LfqmND-hym8-unsplash.jpg",
@@ -48,7 +48,7 @@ const roomsData = [
   {
     id: 5,
     name: "Modern Twin Room",
-    price: 249,
+    price: 398400,
     description:
       "Contemporary room with twin beds, ideal for friends or business travelers seeking comfort.",
     image: "assets/imgs/sara-dubler-Koei_7yYtIo-unsplash.jpg",
@@ -58,7 +58,7 @@ const roomsData = [
   {
     id: 6,
     name: "Family Penthouse",
-    price: 599,
+    price: 958400,
     description:
       "Spacious penthouse perfect for families, with multiple bedrooms and a fully equipped kitchenette.",
     image: "assets/imgs/sidath-vimukthi-60S1280_2i8-unsplash.jpg",
@@ -126,7 +126,7 @@ function createRoomCard(room) {
             <img src="${room.image}" alt="${room.name}" class="room-image">
             <div class="room-card-content">
                 <h3>${room.name}</h3>
-                <p class="room-price">$${room.price} <span>/ night</span></p>
+                <p class="room-price">₦${room.price.toLocaleString()} <span>/ night</span></p>
                 <p class="room-description">${room.description}</p>
                 <div class="room-features">
                     ${room.features
@@ -170,7 +170,7 @@ function displayReservations() {
                   reservation.checkOut
                 )}</p>
                 <p><strong>Guests:</strong> ${reservation.guests}</p>
-                <p><strong>Total:</strong> $${reservation.totalPrice}</p>
+                <p><strong>Total:</strong> ₦${reservation.totalPrice.toLocaleString()}</p>
                 <span class="reservation-status status-${reservation.status.toLowerCase()}">
                     ${reservation.status}
                 </span>
@@ -198,7 +198,7 @@ function openBookingModal(roomId) {
 
   roomInfo.innerHTML = `
         <h3>${selectedRoom.name}</h3>
-        <p>$${selectedRoom.price} per night</p>
+        <p>₦${selectedRoom.price.toLocaleString()} per night</p>
     `;
 
   // Pre-fill dates if available from availability form
