@@ -231,7 +231,7 @@ body {
 
 .form-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-sm);
   align-items: end;
 }
@@ -239,6 +239,7 @@ body {
 .form-group {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .form-group label {
@@ -257,6 +258,8 @@ body {
   font-size: 1rem;
   transition: var(--transition-fast);
   font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
